@@ -1,0 +1,46 @@
+﻿<Page x:Class="mp.Glavnaya"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:mp"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Glavnaya">
+
+    <Grid>
+        <ScrollViewer>
+            <StackPanel>
+                <TextBlock Style="{StaticResource teе}">Книжный магазин</TextBlock>
+                <StackPanel Name="info" Width="700" HorizontalAlignment="Right" VerticalAlignment="Top" Visibility="Collapsed">
+                    <TextBlock Name="kolvo" Style="{StaticResource title}"></TextBlock>
+                    <TextBlock Name="cost" Style="{StaticResource title}"></TextBlock>
+                    <TextBlock Style="{StaticResource title}"></TextBlock>
+                </StackPanel>
+                <DataGrid Name="DGbook" AutoGenerateColumns="False" HorizontalAlignment="Center" IsReadOnly="True" CanUserAddRows="False" Width="500">
+                    <DataGrid.Columns>
+                        <DataGridTemplateColumn>
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Width="700">
+                                            <StackPanel HorizontalAlignment="Left">
+                                                <MediaElement Width="100" Height="120" Initialized="MediaElement_Initialized" Margin="0,10,0,10"></MediaElement>
+                                            </StackPanel>
+                                            <StackPanel HorizontalAlignment="Right">
+                                                <TextBlock Initialized="TextBlock_Initialized" Style="{StaticResource text}"/>
+                                                <TextBlock Name="avtor" Initialized="avtor_Initialized" Style="{StaticResource text}"/>
+                                                <TextBlock Name="cost" Initialized="cost_Initialized" Style="{StaticResource text}"/>
+                                                <TextBlock Name="Nal" Initialized="Nal_Initialized" Style="{StaticResource text}"/>
+                                                <TextBlock Name="NakSklad" Initialized="NakSklad_Initialized" Style="{StaticResource text}"></TextBlock>
+                                                <Button Name="zakaz" Content="Заказать" Initialized="zakaz_Initialized" Margin="0,10,0,10" Click="zakaz_Click" Template="{StaticResource butt}" HorizontalAlignment="Left"></Button>
+                                            </StackPanel>
+                                        </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

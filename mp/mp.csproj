@@ -70,6 +70,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>bd.tt</DependentUpon>
     </Compile>
+    <Compile Include="Glavnaya.xaml.cs">
+      <DependentUpon>Glavnaya.xaml</DependentUpon>
+    </Compile>
     <Compile Include="sysdiagrams.cs">
       <DependentUpon>bd.tt</DependentUpon>
     </Compile>
@@ -79,6 +82,10 @@
     <Compile Include="Книги.cs">
       <DependentUpon>bd.tt</DependentUpon>
     </Compile>
+    <Page Include="Glavnaya.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

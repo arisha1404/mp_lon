@@ -25,6 +25,7 @@ namespace mp
             InitializeComponent();
             BaseBd.B = new Entities();
             Fr.F = frm1;
+            frm1.Navigate(new Glavnaya());
 
         }
     }
